@@ -35,7 +35,7 @@ Table of Contents
  
 
 # Introduction
-{: introduction}
+{: #introduction}
 
 DISCLAIMER: This is a very complex topic and situation right now. If you are new to data visualization, this tutorial will help you build your skills, but that does not mean you should then be sharing all the COVID-19 visualizations you create. Leave that to experts, many of whom have already done[this](https://mdl.library.utoronto.ca/covid-19/data-visualizations). COVID-19 data is not a “cool new dataset” to play with and data visualizations in this context MUST NOT be misleading, inaccurate, or incite panic. Each data point represents a person. Responsible and sensitive visualizations are essential. Epidemiology is also a complex area; fully understanding the data, statistics and visualizations is critical to producing and sharing useful and effective visualizations on this topic. So we recommend that for beginners you create visualizations, such as the one created in this tutorial, for just yourself, for your own learning.
 
@@ -57,7 +57,7 @@ Before embarking on this tutorial, do the following:
  
 
 # The Dashboard
-{: the-dashboard}
+{: #the-dashboard}
 
 This tutorial will be focused on learning how to recreate aspects of [this old dashboard](https://www.tableau.com/about/blog/2020/3/covid-19-data-resources-to-understand-virus-impact)(seen as a screenshot) and[this new dashboard](https://public.tableau.com/profile/covid.19.data.resource.hub#!/vizhome/COVID-19Cases_15840488375320/COVID-19GlobalView)using Tableau Desktop.*Note: This dashboard used to have information on recoveries as well, which is best practice for COVID-19 visualizations, but unfortunately the dataset it was based on removed recovery information, as they concluded the data was too unreliable. Also, this dashboard (and so the tutorial) was designed using straight case counts, but for comparison purposes, it would make more sense to compare based on cases per # of people (e.g., cases per 100,000 people).*
 
@@ -71,7 +71,7 @@ This is a great way to learn how to create dashboards in Tableau. However, in s
  
 
 # Starting a Visualization Project
-{: starting-a-visualization-poject}
+{: #starting-a-visualization-project}
 
 Before embarking on any visualization project, you should always consider your audience and purpose for your visualization ([Stage 1](https://mdl.library.utoronto.ca/dataviz/workflow#audience)) (see our Data Visualization Guide[Design Workflow section](https://mdl.library.utoronto.ca/dataviz/workflow)for more details). For the purposes of this tutorial, the audience is for your eyes only and the purpose is to learn how to visualize data in Tableau Desktop.
 
@@ -82,7 +82,7 @@ Next, you need to select your data and gain an understanding of it ([Stage 2](h
  
 
 # Tableau Tutorial
-{: tableau-tutorial}
+{: #tableau-tutorial}
 
  
 
@@ -106,7 +106,7 @@ Next, you need to select your data and gain an understanding of it ([Stage 2](h
 4. Click on Sheet 1 (in orange at the bottom) to create a new worksheet.
 
 # Create side-by-side bar graphs with filters for cases by day
-{: create-side-by-side-bar-graphs-with-filters-for-cases-by-day}
+{: #create-side-by-side-bar-graphs-with-filters-for-cases-by-day}
 
 5. First, we will create the side by side bar graphs of confirmed cases and deaths over time. **Right click** on the Sheet 1 tab at the bottom, select **Rename**, and give it the name “CasesbyDay”.  
 ![Renaming the new sheet to “CasesbyDay”]({{ '/assets/images/tableau_intermediate_005a.png' | relative_url }})
@@ -161,7 +161,7 @@ Next, you need to select your data and gain an understanding of it ([Stage 2](h
     Then**right click**on the **Date** pill on the Filters shelf and select**Show Filter**. You will see a slider Date filter on the right.  
         ![“Date”, “Country_Region”, and “Case_Type” filter and legend cards displayed.]({{ '/assets/images/tableau_intermediate_021.png' | relative_url }})
 # Create a parameter so that the graphs change based on whether the user wants to see total cases or new cases
-{: create-a-parameter-so-that-the-graphs-change-based-on-whether-the-user-wants-to-see-total-cases-or-new-cases}
+{: #create-a-parameter-so-that-the-graphs-change-based-on-whether-the-user-wants-to-see-total-cases-or-new-cases}
 16. **Right click** in the blank space under the Measures section, and select **Create Parameter…** 
 ![The Field menu displayed with the menu item “Create Parameter” highlighted.]({{ '/assets/images/Tableau_Covid19_005.jpg' | relative_url }})
 
@@ -209,7 +209,7 @@ Next, you need to select your data and gain an understanding of it ([Stage 2](h
 
     *Note: Sometimes you need to select a sideways A first and then the right-side up A in order to make the change stay – just a bug. Now you should see a dynamic label for our latest data point.*
 # Create a dynamic bar graph embedded in a tooltip
-{: create-a-dynamic-bar-graph-embedded-in-a-tooltip}
+{: #create-a-dynamic-bar-graph-embedded-in-a-tooltip}
 
 24. Let’s create a small bar graph that will show up as part of a tooltip when you hover over a bar in the graph. First, create a second worksheet, naming it **Tooltip**.  
 ![Location of the Create Worksheet button, with the button highlighted.]({{ '/assets/images/tableau_intermediate_000.png' | relative_url }})  
@@ -250,7 +250,7 @@ Next, you need to select your data and gain an understanding of it ([Stage 2](h
 ![Y axis menu with the menu item "Show Header" highlighted]({{ '/assets/images/Tableau_Covid19_010.jpg' | relative_url }})  
 ![Final graph, with the y axis label removed]({{ '/assets/images/tableau_intermediate_042.png' | relative_url }})
 # Create side-by-side proportional symbol maps of cases with dynamic tooltips
-{: create-side-by-side-proportional-symbol-maps-of-cases-with-dynamic-tooltips}
+{: #create-side-by-side-proportional-symbol-maps-of-cases-with-dynamic-tooltips}
 
 34. For the next section of the dashboard, we need to create some maps. First, create a third**worksheet** and name it **Map**. For best practices on mapping COVID data, including an explanation of the choice of why one might use a logarithmic scale to size the proportional symbols (which we will do in this case), see this[blog post from Esri on Mapping Coronavirus, responsibly](https://www.esri.com/arcgis-blog/products/product/mapping/mapping-coronavirus-responsibly/).
 
@@ -363,7 +363,7 @@ END
 55. Also, let’s remove a few headers as we did with the first visualization. **Right click** on the**Case_Type header** at the top of the map, and select **Hide Field Labels for Columns**. **Right click** the **Confirmed header** on the top left of the map, and uncheck **Show Header**.  
 ![Final map displayed]({{ '/assets/images/tableau_intermediate_063.png' | relative_url }})
 # Create side-by-side bar graphs for cases by country
-{: create-side-by-side-bar-graphs-for-cases-by-country}
+{: #create-side-by-side-bar-graphs-for-cases-by-country}
 
 56. For the third section of the dashboard, create a **new worksheet**, and name it “**CasesbyCountry**”.
 
@@ -401,7 +401,7 @@ END
 67. Click on **Label** on the Marks card and select **Show Mark Labels**. Also check off **Allow labels to overlap other marks**.  
     ![Label menu with the items "Show mark labels” and "Allow labels to overlap other marks" highlighted]({{ '/assets/images/tableau_intermediate_071.png' | relative_url }})
 # Create a dashboard to pull these three visualizations together
-{: create-a-dashboard-to-pull-these-three-visualizations-together}
+{: #create-a-dashboard-to-pull-these-three-visualizations-together}
 
 68. Finally, let’s create a dashboard to pull all of these visualizations together. Click on the **new dashboard** icon at the bottom to create a new dashboard.  
 !["New Dashboard" button highlighted]({{ '/assets/images/tableau_intermediate_072.png' | relative_url }})
