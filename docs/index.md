@@ -37,29 +37,29 @@ Table of Contents
 # Introduction
 {: #introduction}
 
-DISCLAIMER: This is a very complex topic and situation right now. If you are new to data visualization, this tutorial will help you build your skills, but that does not mean you should then be sharing all the COVID-19 visualizations you create. Leave that to experts, many of whom have already done[this](https://mdl.library.utoronto.ca/covid-19/data-visualizations). COVID-19 data is not a “cool new dataset” to play with and data visualizations in this context MUST NOT be misleading, inaccurate, or incite panic. Each data point represents a person. Responsible and sensitive visualizations are essential. Epidemiology is also a complex area; fully understanding the data, statistics and visualizations is critical to producing and sharing useful and effective visualizations on this topic. So we recommend that for beginners you create visualizations, such as the one created in this tutorial, for just yourself, for your own learning.
+DISCLAIMER: This is a very complex topic and situation right now. If you are new to data visualization, this tutorial will help you build your skills, but that does not mean you should then be sharing all the COVID-19 visualizations you create. Leave that to experts, many of whom have already done [this](https://mdl.library.utoronto.ca/covid-19/data-visualizations). COVID-19 data is not a “cool new dataset” to play with and data visualizations in this context MUST NOT be misleading, inaccurate, or incite panic. Each data point represents a person. Responsible and sensitive visualizations are essential. Epidemiology is also a complex area; fully understanding the data, statistics and visualizations is critical to producing and sharing useful and effective visualizations on this topic. So we recommend that for beginners you create visualizations, such as the one created in this tutorial, for just yourself, for your own learning.
 
 Before embarking on this tutorial, do the following:
 
 1. Get more familiar with the topic and data, and the concerns and precautions around visualizing it:
 
-    1. [10 considerations before you create another chart about COVID-19](https://www.tableau.com/about/blog/2020/3/ten-considerations-you-create-another-chart-about-covid-19)(Tableau)
-    2. [A complete guide to coronavirus charts: Be informed, not terrified](https://www.fastcompany.com/90477393/a-complete-guide-to-coronavirus-charts-be-informed-not-terrified)(Amanda Makulec, Excella, FastCompany)
-    3. [17 (or so) responsible live visualizations about the coronavirus, for you to use](https://blog.datawrapper.de/coronaviruscharts/)(Datawrapper)
-    4. [What the BBC got wrong in their COVID-19 visualization](https://www.tableau.com/about/blog/2020/3/covid-19-resources-data-viz-best-practices)(Tableau)
-2. [Install Tableau Desktop](https://mdl.library.utoronto.ca/technology/tutorials/installing-tableau-desktop)(This tutorial was created using Tableau Desktop version 2020.2)
+    1. [10 considerations before you create another chart about COVID-19](https://www.tableau.com/about/blog/2020/3/ten-considerations-you-create-another-chart-about-covid-19) (Tableau)
+    2. [A complete guide to coronavirus charts: Be informed, not terrified](https://www.fastcompany.com/90477393/a-complete-guide-to-coronavirus-charts-be-informed-not-terrified) (Amanda Makulec, Excella, FastCompany)
+    3. [17 (or so) responsible live visualizations about the coronavirus, for you to use](https://blog.datawrapper.de/coronaviruscharts/) (Datawrapper)
+    4. [What the BBC got wrong in their COVID-19 visualization](https://www.tableau.com/about/blog/2020/3/covid-19-resources-data-viz-best-practices) (Tableau)
+2. [Install Tableau Desktop](https://mdl.library.utoronto.ca/technology/tutorials/installing-tableau-desktop) (This tutorial was created using Tableau Desktop version 2020.2)
 
 3. Get more familiar with the tool we’re going to be using by trying some of our other Tableau tutorials first:
 
-    1. [Creating Data Visualizations Using Tableau Desktop](https://mdl.library.utoronto.ca/technology/tutorials/creating-data-vizualizations-using-tableau-desktop)(Beginner)
-    2. [Getting Started with Tableau Desktop](https://mdl.library.utoronto.ca/technology/tutorials/getting-started-tableau-desktop-beginner-intermediate)(Beginner to Intermediate)
+    1. [Creating Data Visualizations Using Tableau Desktop](https://mdl.library.utoronto.ca/technology/tutorials/creating-data-vizualizations-using-tableau-desktop) (Beginner)
+    2. [Getting Started with Tableau Desktop](https://mdl.library.utoronto.ca/technology/tutorials/getting-started-tableau-desktop-beginner-intermediate) (Beginner to Intermediate)
 
  
 
 # The Dashboard
 {: #the-dashboard}
 
-This tutorial will be focused on learning how to recreate aspects of [this old dashboard](https://www.tableau.com/about/blog/2020/3/covid-19-data-resources-to-understand-virus-impact)(seen as a screenshot) and[this new dashboard](https://public.tableau.com/profile/covid.19.data.resource.hub#!/vizhome/COVID-19Cases_15840488375320/COVID-19GlobalView)using Tableau Desktop.*Note: This dashboard used to have information on recoveries as well, which is best practice for COVID-19 visualizations, but unfortunately the dataset it was based on removed recovery information, as they concluded the data was too unreliable. Also, this dashboard (and so the tutorial) was designed using straight case counts, but for comparison purposes, it would make more sense to compare based on cases per # of people (e.g., cases per 100,000 people).*
+This tutorial will be focused on learning how to recreate aspects of [this old dashboard](https://www.tableau.com/about/blog/2020/3/covid-19-data-resources-to-understand-virus-impact) (seen as a screenshot) and [this new dashboard](https://public.tableau.com/profile/covid.19.data.resource.hub#!/vizhome/COVID-19Cases_15840488375320/COVID-19GlobalView) using Tableau Desktop. *Note: This dashboard used to have information on recoveries as well, which is best practice for COVID-19 visualizations, but unfortunately the dataset it was based on removed recovery information, as they concluded the data was too unreliable. Also, this dashboard (and so the tutorial) was designed using straight case counts, but for comparison purposes, it would make more sense to compare based on cases per # of people (e.g., cases per 100,000 people).*
 
 When working to emulate a Tableau dashboard found on the Tableau Public website, you can often click on the download icon (hover over the icons at the bottom right of the dashboard to find it) and download the underlying workbook (if the owner gave permission).  
 ![Tableau Public workbook with download button highlighted]({{ '/assets/images/tableau_intermediate_000b.png' | relative_url }})
@@ -73,11 +73,11 @@ This is a great way to learn how to create dashboards in Tableau. However, in s
 # Starting a Visualization Project
 {: #starting-a-visualization-project}
 
-Before embarking on any visualization project, you should always consider your audience and purpose for your visualization ([Stage 1](https://mdl.library.utoronto.ca/dataviz/workflow#audience)) (see our Data Visualization Guide[Design Workflow section](https://mdl.library.utoronto.ca/dataviz/workflow)for more details). For the purposes of this tutorial, the audience is for your eyes only and the purpose is to learn how to visualize data in Tableau Desktop.
+Before embarking on any visualization project, you should always consider your audience and purpose for your visualization ([Stage 1](https://mdl.library.utoronto.ca/dataviz/workflow#audience)) (see our Data Visualization Guide [Design Workflow section](https://mdl.library.utoronto.ca/dataviz/workflow) for more details). For the purposes of this tutorial, the audience is for your eyes only and the purpose is to learn how to visualize data in Tableau Desktop.
 
-Next, you need to select your data and gain an understanding of it ([Stage 2](https://mdl.library.utoronto.ca/dataviz/workflow#data)). For this tutorial, we started by using a[Google Sheet document](https://docs.google.com/spreadsheets/d/14quQPFErG-hlpsrNgYcX85vW7JMMK5X2vNZrafRcH8c/htmlview#gid=1939846621)that was being continuously cleaned and updated by Tableau daily ([see this page for details](https://www.tableau.com/about/blog/2020/3/covid-19-data-resources-to-understand-virus-impact)). This was not necessarily the most authoritative or up-to-date data source to use for this topic; see our[resources pages](https://mdl.library.utoronto.ca/covid-19/resources)for other sources out there. It was selected as a good source to demonstrate linking to real time data in Tableau.
+Next, you need to select your data and gain an understanding of it ([Stage 2](https://mdl.library.utoronto.ca/dataviz/workflow#data)). For this tutorial, we started by using a [Google Sheet document](https://docs.google.com/spreadsheets/d/14quQPFErG-hlpsrNgYcX85vW7JMMK5X2vNZrafRcH8c/htmlview#gid=1939846621) that was being continuously cleaned and updated by Tableau daily ([see this page for details](https://www.tableau.com/about/blog/2020/3/covid-19-data-resources-to-understand-virus-impact)). This was not necessarily the most authoritative or up-to-date data source to use for this topic; see our [resources pages](https://mdl.library.utoronto.ca/covid-19/resources) for other sources out there. It was selected as a good source to demonstrate linking to real time data in Tableau.
 
-*Note: The dashboard and dataset are constantly changing. Unfortunately, these instructions no longer work with the current google sheet, so instead download [this snapshot of the data](http://maps.library.utoronto.ca/workshops/TableauTutorial/COVID19Cases.xlsx)(from April 7, 2020) to use with the tutorial instead. In Tableau’s Connect screen, connect to an Excel file instead and browse to this snapshot file, then skip to step 2 to continue the tutorial. We leave the old instructions up for your reference on how you would connect to a google sheet datasource. More details about this dataset and how it has changed since this tutorial was created can be found[on this Tableau page](https://www.tableau.com/about/blog/2020/5/8-changes-to-covid-19-data-set).*
+*Note: The dashboard and dataset are constantly changing. Unfortunately, these instructions no longer work with the current google sheet, so instead download [this snapshot of the data](http://maps.library.utoronto.ca/workshops/TableauTutorial/COVID19Cases.xlsx) (from April 7, 2020) to use with the tutorial instead. In Tableau’s Connect screen, connect to an Excel file instead and browse to this snapshot file, then skip to step 2 to continue the tutorial. We leave the old instructions up for your reference on how you would connect to a google sheet datasource. More details about this dataset and how it has changed since this tutorial was created can be found [on this Tableau page](https://www.tableau.com/about/blog/2020/5/8-changes-to-covid-19-data-set).*
 
  
 
@@ -92,24 +92,24 @@ Next, you need to select your data and gain an understanding of it ([Stage 2](h
 1. First start up Tableau Desktop and connect it to a Google Sheet of the COVID\-19 data. In Tableau’s Connect screen, under **To a Server**, select **Google Sheets**.  
 ![Tableau's connect menu. The option 'Google Sheets' is highlighted.]({{ '/assets/images/tableau_intermediate_001_0.png' | relative_url }})
 
-    Follow the prompts to allow Tableau to access your Google account. Go back to Tableau. From a list of sheets, you should see COVID-19 Cases, **highlight it**, and then click on **Connect**. If you don’t see that sheet, then, in the URL bar, paste this link:[https://docs.google.com/spreadsheets/d/14quQPFErG-hlpsrNgYcX85vW7JMMK5X2vNZrafRcH8c/edit#gid=1154316396](https://docs.google.com/spreadsheets/d/14quQPFErG-hlpsrNgYcX85vW7JMMK5X2vNZrafRcH8c/edit#gid=1154316396)and click on Search. Then highlight the sheet COVID-19 cases, and click on Connect.  
+    Follow the prompts to allow Tableau to access your Google account. Go back to Tableau. From a list of sheets, you should see COVID-19 Cases, **highlight it**, and then click on **Connect**. If you don’t see that sheet, then, in the URL bar, paste this link: [https://docs.google.com/spreadsheets/d/14quQPFErG-hlpsrNgYcX85vW7JMMK5X2vNZrafRcH8c/edit#gid=1154316396](https://docs.google.com/spreadsheets/d/14quQPFErG-hlpsrNgYcX85vW7JMMK5X2vNZrafRcH8c/edit#gid=1154316396) and click on Search. Then highlight the sheet COVID-19 cases, and click on Connect.  
         ![Window for selecting the Google sheet to connect to]({{ '/assets/images/tableau_intermediate_002.png' | relative_url }})
 
     Since this is a popular dataset, it might take some time to first connect to it, and then to load the data.
 
 2. Drag **New Union**, listed on the left, to the orange box in the centre of the screen that says “Drag sheets here”.  
-![Tableau's database join page. 'New Union' is highlighted.]({{ '/assets/images/tableau_intermediate_003.png' | relative_url }})
+    ![Tableau's database join page. 'New Union' is highlighted.]({{ '/assets/images/tableau_intermediate_003.png' | relative_url }})
 
 3. Next drag in the sheets called **COVID-19 Confirmed** and **COVID-19 Deaths** into the Union box, and click on OK. This will create a dataset combining all the rows in both of these sheets (they share the same columns).  
-![Union popup confirming the sheets to be joined.]({{ '/assets/images/tableau_intermediate_004.png' | relative_url }})
+    ![Union popup confirming the sheets to be joined.]({{ '/assets/images/tableau_intermediate_004.png' | relative_url }})
 
 4. Click on Sheet 1 (in orange at the bottom) to create a new worksheet.
 
-# Create side-by-side bar graphs with filters for cases by day
-{: #create-side-by-side-bar-graphs-with-filters-for-cases-by-day}
+    **Create side-by-side bar graphs with filters for cases by day**
+    {: #create-side-by-side-bar-graphs-with-filters-for-cases-by-day}
 
 5. First, we will create the side by side bar graphs of confirmed cases and deaths over time. **Right click** on the Sheet 1 tab at the bottom, select **Rename**, and give it the name “CasesbyDay”.  
-![Renaming the new sheet to “CasesbyDay”]({{ '/assets/images/tableau_intermediate_005a.png' | relative_url }})
+![Renaming the new sheet to “CasesbyDay”.]({{ '/assets/images/tableau_intermediate_005a.png' | relative_url }})
 
 6. From the Dimensions section, drag **Date**next to **columns**. Note that it defaults to YEAR(Date). To format how the date is displayed, **right click** on YEAR(Date) and select **Day**, specifically the option that has the example "8th May, 2015".  
 ![Drop down menu for YEAR(Date) with the menu item 'Day' highlighted]({{ '/assets/images/Tableau_Covid19_001.jpg' | relative_url }})
@@ -124,44 +124,45 @@ Next, you need to select your data and gain an understanding of it ([Stage 2](h
 ![The menu item 'Bar' highlighted in the Marks dropdown menu]({{ '/assets/images/Tableau_Covid19_003.jpg' | relative_url }})
 
 10. From Dimensions, drag**Case_Type**next to **columns**, to the **left** of DAY(Date). This creates two side-by-side bar graphs showing cases by day. By sharing the y-axis, you can more accurately compare the data. To see them both without scrolling, drop down on Standard at the top and change the view to Entire View.  
-![Two bar charts are displayed. Above them, the view option 'Entire View' and the pill 'Case_Type' highlighted]({{ '/assets/images/tableau_intermediate_010.png' | relative_url }})
+    ![Two bar charts are displayed. Above them, the view option 'Entire View' and the pill 'Case_Type' highlighted]({{ '/assets/images/tableau_intermediate_010.png' | relative_url }})
 
 11. Let’s use colours to differentiate the two categories. Drag**Case_Type**to **Color**on the Marks card. Click on Color and then select "Edit Colors...".  
-!["Edit Colours" button highlighted.]({{ '/assets/images/tableau_intermediate_011.png' | relative_url }})
+    !["Edit Colours" button highlighted.]({{ '/assets/images/tableau_intermediate_011.png' | relative_url }})
 
-    Leave Confirmed cases at the default blue, but select**Deaths**then the **purple** available in the default palette to change it. Then click on OK.  
-        ![The "Edit colours" menu, with "Deaths" assigned colour changed to purple.]({{ '/assets/images/tableau_intermediate_012.png' | relative_url }})
+        Leave Confirmed cases at the default blue, but select**Deaths**then the **purple** available in the default palette to change it. Then click on OK.  
+            ![The "Edit colours" menu, with "Deaths" assigned colour changed to purple.]({{ '/assets/images/tableau_intermediate_012.png' | relative_url }})
 
 12. Let’s clean up the axes so that when the graphs are displayed in the dashboard, they don’t take up so much room. Right click on the **x-axis** listing the dates, and **uncheck Show Header**. Since one day will be highlighted, click in the white space of the graph to unselect that day.  
-![X-axis menu with the menu item "Show Header" highlighted.]({{ '/assets/images/tableau_intermediate_013.png' | relative_url }})
+    ![X-axis menu with the menu item "Show Header" highlighted.]({{ '/assets/images/tableau_intermediate_013.png' | relative_url }})
 
 13. **Right click** on the **Case Type header** in the graph, and select **Hide Field Label for Columns**.  
-![Dropdown menu for the Case_Type column. The menu item option "Hide Field Labels for Columns" is highlighted.]({{ '/assets/images/tableau_intermediate_014a.png' | relative_url }})
+    ![Dropdown menu for the Case_Type column. The menu item option "Hide Field Labels for Columns" is highlighted.]({{ '/assets/images/tableau_intermediate_014a.png' | relative_url }})
 
 14. We can also add some filters to these graphs, so that a user could filter to see a certain country or date range. From Dimensions, drag**Country_Region**to the**Filters**shelf. Click on**All** and then OK.  
-![“Country_Region” in the Dimensions section is highlighted, as well as the Filters Shelf. The resulting pop-up window is also shown. ]({{ '/assets/images/Tableau_Covid19_004.JPG' | relative_url }})
+    ![“Country_Region” in the Dimensions section is highlighted, as well as the Filters Shelf. The resulting pop-up window is also shown. ]({{ '/assets/images/Tableau_Covid19_004.JPG' | relative_url }})
 
-    Then**right click**on the**Country_Region**pill on the Filters shelf and select**Show Filter**.  
-        ![Dropdown menu for the "Country_Region" pill, with the menu item "Show Filter" highlighted.]({{ '/assets/images/tableau_intermediate_016.png' | relative_url }})
+        Then**right click**on the**Country_Region**pill on the Filters shelf and select**Show Filter**.  
+            ![Dropdown menu for the "Country_Region" pill, with the menu item "Show Filter" highlighted.]({{ '/assets/images/tableau_intermediate_016.png' | relative_url }})
 
-    You will see a list of countries on the right. If you hover over the title of the list, you should see a small arrow on the right that you can use to access a drop-down menu.  
-        ![Dropdown button on the "Country_Region" card highlighted. ]({{ '/assets/images/tableau_intermediate_017.png' | relative_url }})
+        You will see a list of countries on the right. If you hover over the title of the list, you should see a small arrow on the right that you can use to access a drop-down menu.  
+            ![Dropdown button on the "Country_Region" card highlighted. ]({{ '/assets/images/tableau_intermediate_017.png' | relative_url }})
 
-    Click on it and select **Single Value (dropdown)**.  
-        ![Dropdown menu for the “Country_Region” card, with the menu item “Single Value (dropdown)” selected.]({{ '/assets/images/tableau_intermediate_018.png' | relative_url }})
+        Click on it and select **Single Value (dropdown)**.  
+            ![Dropdown menu for the “Country_Region” card, with the menu item “Single Value (dropdown)” selected.]({{ '/assets/images/tableau_intermediate_018.png' | relative_url }})
 
-    This makes the filter take up a much smaller amount of space on the screen, and eventually the dashboard. Make the country filter include All countries for now.
+        This makes the filter take up a much smaller amount of space on the screen, and eventually the dashboard. Make the country filter include All countries for now.
 
 15. From Dimensions, drag **Date** to the **Filters** shelf. Select **Relative Date** and click Next.  
-!["Filter Field [Date]" pop up menu with the menu item "Relative Date" highlighted.]({{ '/assets/images/tableau_intermediate_019.png' | relative_url }})
+    !["Filter Field [Date]" pop up menu with the menu item "Relative Date" highlighted.]({{ '/assets/images/tableau_intermediate_019.png' | relative_url }})
 
     Go to the **Starting date** tab, check **Include Null Values**, and then click OK.  
-        ![The "Filter [Date]" pop up window the items “Starting date” and "Include Null Values" highlighted. ]({{ '/assets/images/tableau_intermediate_020.png' | relative_url }})
+     ![The "Filter [Date]" pop up window the items “Starting date” and "Include Null Values" highlighted. ]({{ '/assets/images/tableau_intermediate_020.png' | relative_url }})
 
     Then**right click**on the **Date** pill on the Filters shelf and select**Show Filter**. You will see a slider Date filter on the right.  
         ![“Date”, “Country_Region”, and “Case_Type” filter and legend cards displayed.]({{ '/assets/images/tableau_intermediate_021.png' | relative_url }})
-# Create a parameter so that the graphs change based on whether the user wants to see total cases or new cases
-{: #create-a-parameter-so-that-the-graphs-change-based-on-whether-the-user-wants-to-see-total-cases-or-new-cases}
+
+    **Create a parameter so that the graphs change based on whether the user wants to see total cases or new cases**
+    {: #create-a-parameter-so-that-the-graphs-change-based-on-whether-the-user-wants-to-see-total-cases-or-new-cases}
 16. **Right click** in the blank space under the Measures section, and select **Create Parameter…** 
 ![The Field menu displayed with the menu item “Create Parameter” highlighted.]({{ '/assets/images/Tableau_Covid19_005.jpg' | relative_url }})
 
@@ -189,27 +190,30 @@ Next, you need to select your data and gain an understanding of it ([Stage 2](h
 ![Menu that appears after clicking on Select Metric. The menu item "Show Parameter" is also highlighted.]({{ '/assets/images/Tableau_Covid19_007.jpg' | relative_url }})
 
     Now you can adjust whether Total Cases or New Cases are displayed in the bar graphs using this menu. It will sum either the field Cases or Difference depending on what was selected.
-# Create a dynamic mark label
-{: dynamic-mark-label}
+
+    **Create a dynamic mark label**
+    {: #create-a-dynamic-mark-label}
 
 20. Let’s add a dynamic mark label to highlight today’s data in the graph. From Measures, drag **Metric Switcher** to **Label** on the Marks card. From Dimensions, drag **Date** to **Label**too.  
 ![Label mark on the marks card is highlighted. ]({{ '/assets/images/tableau_intermediate_029.png' | relative_url }})
 
 21. **Right click** on the**YEAR(Date)** pill listed on the Marks card, and select **Exact Date**.  
-![The menu from the "YEAR(Date)" pill, with the menu item "Exact Date" highlighted]({{ '/assets/images/tableau_intermediate_030.png' | relative_url }})
+    ![The menu from the "YEAR(Date)" pill, with the menu item "Exact Date" highlighted]({{ '/assets/images/tableau_intermediate_030.png' | relative_url }})
 
 22. Click on **Label**on the Marks card. Under the**Marks to Label**section, select**Most Recent**. Under the**Label Appearance**section, click on the gray button with ellipses next to Text.  
-![Label card window with the ellipses button and the "Most Recent" button highlighted.]({{ '/assets/images/tableau_intermediate_031.png' | relative_url }})
+    ![Label card window with the ellipses button and the "Most Recent" button highlighted.]({{ '/assets/images/tableau_intermediate_031.png' | relative_url }})
 
-    Center both lines (if not centered already) and bold them. Change <SUM(Metric Switcher)> to **size 12**, and <Date> to **size 10**. Then click on OK.  
-        ![The "Edit Label" pop up window displaying the bolded and resized text.]({{ '/assets/images/tableau_intermediate_032.png' | relative_url }})
+    Center both lines (if not centered already) and bold them. Change <SUM(Metric Switcher)> to **size 12**, and <Date> to **size 10**. Then click on OK. 
+    
+    ![The "Edit Label" pop up window displaying the bolded and resized text.]({{ '/assets/images/tableau_intermediate_032.png' | relative_url }})
 
 23. While still on the Label popup, under the**Label Appearance**section, click the**Alignment**dropdown menu. Set Horizontal alignment to right justified, Direction (of text) to a right-side up A, Vertical alignment to top, and Wrap to off.  
 ![Label Alignment sub-menu with the alignment settings customized as described.]({{ '/assets/images/tableau_intermediate_033.png' | relative_url }})
 
     *Note: Sometimes you need to select a sideways A first and then the right-side up A in order to make the change stay – just a bug. Now you should see a dynamic label for our latest data point.*
-# Create a dynamic bar graph embedded in a tooltip
-{: #create-a-dynamic-bar-graph-embedded-in-a-tooltip}
+
+    **Create a dynamic bar graph embedded in a tooltip**
+    {: #create-a-dynamic-bar-graph-embedded-in-a-tooltip}
 
 24. Let’s create a small bar graph that will show up as part of a tooltip when you hover over a bar in the graph. First, create a second worksheet, naming it **Tooltip**.  
 ![Location of the Create Worksheet button, with the button highlighted.]({{ '/assets/images/tableau_intermediate_000.png' | relative_url }})  
@@ -239,9 +243,12 @@ Next, you need to select your data and gain an understanding of it ([Stage 2](h
         ![The "Edit Tooltip" pop up window with the “Insert” dropdown menu. The menu item “Sheets” and its sub-menu item “Tooltip” are also displayed.]({{ '/assets/images/tableau_intermediate_038.png' | relative_url }})
 
 32. In the ensuing block of text, **highlight <All Fields>** (but leave the surrounding quotation marks), click on **Insert**, and then click**DAY(Date)**.  
-![The "Edit Tooltip" window with Tooltip text inserted. In the text, the section <All Fields> is highlighted.]({{ '/assets/images/tableau_intermediate_039a.png' | relative_url }})  
-![The "Edit Tooltip" window with the Insert dropdown menu selected. The menu item "DAY(Date)" is highlighted.]({{ '/assets/images/Tableau_Covid19_009.jpg' | relative_url }})  
-![The "Edit Tooltip" window with the final text.]({{ '/assets/images/tableau_intermediate_040.png' | relative_url }})
+
+    ![The "Edit Tooltip" window with Tooltip text inserted. In the text, the section <All Fields> is highlighted.]({{ '/assets/images/tableau_intermediate_039a.png' | relative_url }})  
+
+    ![The "Edit Tooltip" window with the Insert dropdown menu selected. The menu item "DAY(Date)" is highlighted.]({{ '/assets/images/Tableau_Covid19_009.jpg' | relative_url }})  
+
+    ![The "Edit Tooltip" window with the final text.]({{ '/assets/images/tableau_intermediate_040.png' | relative_url }})
 
     Then click OK. As you hover over the various bars, you will now see the Tooltip worksheet in miniature, filtered by the date, showing the day’s data.  
         ![The CasesbyDay worksheet with the tooltip appearing when hovering over a specific bar.]({{ '/assets/images/tableau_intermediate_041.png' | relative_url }})
@@ -249,8 +256,9 @@ Next, you need to select your data and gain an understanding of it ([Stage 2](h
 33. To finish up, let’s clean up the axes a bit more. Now that we have added a label and a tooltip, **right click** on the **y axis** and **uncheck Show Header** to remove that extra information and make the graph more compact for our dashboard.  
 ![Y axis menu with the menu item "Show Header" highlighted]({{ '/assets/images/Tableau_Covid19_010.jpg' | relative_url }})  
 ![Final graph, with the y axis label removed]({{ '/assets/images/tableau_intermediate_042.png' | relative_url }})
-# Create side-by-side proportional symbol maps of cases with dynamic tooltips
-{: #create-side-by-side-proportional-symbol-maps-of-cases-with-dynamic-tooltips}
+
+    **Create side-by-side proportional symbol maps of cases with dynamic tooltips**
+    {: #create-side-by-side-proportional-symbol-maps-of-cases-with-dynamic-tooltips}
 
 34. For the next section of the dashboard, we need to create some maps. First, create a third**worksheet** and name it **Map**. For best practices on mapping COVID data, including an explanation of the choice of why one might use a logarithmic scale to size the proportional symbols (which we will do in this case), see this[blog post from Esri on Mapping Coronavirus, responsibly](https://www.esri.com/arcgis-blog/products/product/mapping/mapping-coronavirus-responsibly/).
 
@@ -362,8 +370,9 @@ END
         ![Null value warning popup, with the item "Filter data" highlighted]({{ '/assets/images/tableau_intermediate_062.png' | relative_url }})
 55. Also, let’s remove a few headers as we did with the first visualization. **Right click** on the**Case_Type header** at the top of the map, and select **Hide Field Labels for Columns**. **Right click** the **Confirmed header** on the top left of the map, and uncheck **Show Header**.  
 ![Final map displayed]({{ '/assets/images/tableau_intermediate_063.png' | relative_url }})
-# Create side-by-side bar graphs for cases by country
-{: #create-side-by-side-bar-graphs-for-cases-by-country}
+
+    **Create side-by-side bar graphs for cases by country**
+    {: #create-side-by-side-bar-graphs-for-cases-by-country}
 
 56. For the third section of the dashboard, create a **new worksheet**, and name it “**CasesbyCountry**”.
 
@@ -400,8 +409,9 @@ END
 
 67. Click on **Label** on the Marks card and select **Show Mark Labels**. Also check off **Allow labels to overlap other marks**.  
     ![Label menu with the items "Show mark labels” and "Allow labels to overlap other marks" highlighted]({{ '/assets/images/tableau_intermediate_071.png' | relative_url }})
-# Create a dashboard to pull these three visualizations together
-{: #create-a-dashboard-to-pull-these-three-visualizations-together}
+
+    **Create a dashboard to pull these three visualizations together**
+    {: #create-a-dashboard-to-pull-these-three-visualizations-together}
 
 68. Finally, let’s create a dashboard to pull all of these visualizations together. Click on the **new dashboard** icon at the bottom to create a new dashboard.  
 !["New Dashboard" button highlighted]({{ '/assets/images/tableau_intermediate_072.png' | relative_url }})
