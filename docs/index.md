@@ -6,6 +6,9 @@ created_date: 2020-04-07
 staff:
     - name: Nick Field
       link: https://library.utoronto.ca/staff/nick-field
+maintainer: 
+    - name: Kelly Schultz
+      link: https://library.utoronto.ca/staff/kelly-schultz
 permalink: "/"  #! Remove this if not the homepage
 ---
 
