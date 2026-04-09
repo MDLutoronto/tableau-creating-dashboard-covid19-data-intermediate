@@ -501,5 +501,3 @@ Then click on OK.
         ![The finished dashboard]({{ '/assets/images/tableau_intermediate_997a.png' | relative_url }})
 
 That’s it! Your dashboard is now complete. If you downloaded Tableau’s dashboard workbook file from Tableau Public, you will notice that not everything in that file is covered in this tutorial. Feel free to explore further and try to understand and recreate all aspects of the dashboard for your own learning.
-
-Technique: [Data Visualization](https://mdl.library.utoronto.ca/technique/data-visualization) | Tools: [Tableau](https://mdl.library.utoronto.ca/tools/tableau)
