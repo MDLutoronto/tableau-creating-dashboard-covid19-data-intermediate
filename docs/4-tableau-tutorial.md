@@ -1,30 +1,10 @@
 ---
-title: "Creating a Tableau Dashboard using COVID-19 data (Intermediate)"
-layout: "home"
-description: "This tutorial provides an opportunity to learn data visualization skills using a common data visualization tool, Tableau Desktop. People often say that they learn better when using data that resonates with them, so we are using COVID-19 data in this tutorial, as this topic is touching many people’s lives right now."
-created_date: 2020-04-07
-staff:
-    - name: Nick Field
-      link: https://library.utoronto.ca/staff/nick-field
-maintainer: 
-    - name: Kelly Schultz
-      link: https://library.utoronto.ca/staff/kelly-schultz
-permalink: "/"  #! Remove this if not the homepage
+title: Tableau Tutorial
+parent: Creating a Tableau Dashboard using COVID-19 data (Intermediate)
+layout: default
+nav_order: 4
 ---
-
-# Creating a Tableau Dashboard using COVID-19 data (Intermediate)
-
-This tutorial provides an opportunity to learn data visualization skills using a common data visualization tool, Tableau Desktop. People often say that they learn better when using data that resonates with them, so we are using COVID-19 data in this tutorial, as this topic is touching many people’s lives right now.
-
- 
-
-Table of Contents
-=================
-
-[Introduction](#introduction)  
-[The Dashboard](#the-dashboard)  
-[Starting a Visualization Project](#starting-a-visualization-project)   
-[Tableau Tutorial](#tableau-tutorial)
+# Tableau Tutorial
 
 * [Connecting to a live dataset that has multiple sheets](#connecting-to-a-live-dataset-that-has-multiple-sheets)
 * [Create side-by-side bar graphs with filters for cases by day](#create-side-by-side-bar-graphs-with-filters-for-cases-by-day)
@@ -35,61 +15,8 @@ Table of Contents
 * [Create side-by-side bar graphs for cases by country](#create-side-by-side-bar-graphs-for-cases-by-country)
 * [Create a dashboard to pull these three visualizations together](#create-a-dashboard-to-pull-these-three-visualizations-together)
 
- 
 
-# Introduction
-{: #introduction}
-
-DISCLAIMER: This is a very complex topic and situation right now. If you are new to data visualization, this tutorial will help you build your skills, but that does not mean you should then be sharing all the COVID-19 visualizations you create. Leave that to experts, many of whom have already done [this](https://mdl.library.utoronto.ca/covid-19/data-visualizations). COVID-19 data is not a “cool new dataset” to play with and data visualizations in this context MUST NOT be misleading, inaccurate, or incite panic. Each data point represents a person. Responsible and sensitive visualizations are essential. Epidemiology is also a complex area; fully understanding the data, statistics and visualizations is critical to producing and sharing useful and effective visualizations on this topic. So we recommend that for beginners you create visualizations, such as the one created in this tutorial, for just yourself, for your own learning.
-
-Before embarking on this tutorial, do the following:
-
-1. Get more familiar with the topic and data, and the concerns and precautions around visualizing it:
-
-    1. [10 considerations before you create another chart about COVID-19](https://www.tableau.com/about/blog/2020/3/ten-considerations-you-create-another-chart-about-covid-19) (Tableau)
-    2. [A complete guide to coronavirus charts: Be informed, not terrified](https://www.fastcompany.com/90477393/a-complete-guide-to-coronavirus-charts-be-informed-not-terrified) (Amanda Makulec, Excella, FastCompany)
-    3. [17 (or so) responsible live visualizations about the coronavirus, for you to use](https://blog.datawrapper.de/coronaviruscharts/) (Datawrapper)
-    4. [What the BBC got wrong in their COVID-19 visualization](https://www.tableau.com/about/blog/2020/3/covid-19-resources-data-viz-best-practices) (Tableau)
-2. [Install Tableau Desktop](https://mdl.library.utoronto.ca/technology/tutorials/installing-tableau-desktop) (This tutorial was created using Tableau Desktop version 2020.2)
-
-3. Get more familiar with the tool we’re going to be using by trying some of our other Tableau tutorials first:
-
-    1. [Creating Data Visualizations Using Tableau Desktop](https://mdl.library.utoronto.ca/technology/tutorials/creating-data-vizualizations-using-tableau-desktop) (Beginner)
-    2. [Getting Started with Tableau Desktop](https://mdl.library.utoronto.ca/technology/tutorials/getting-started-tableau-desktop-beginner-intermediate) (Beginner to Intermediate)
-
- 
-
-# The Dashboard
-{: #the-dashboard}
-
-This tutorial will be focused on learning how to recreate aspects of [this old dashboard](https://www.tableau.com/about/blog/2020/3/covid-19-data-resources-to-understand-virus-impact) (seen as a screenshot) and [this new dashboard](https://public.tableau.com/profile/covid.19.data.resource.hub#!/vizhome/COVID-19Cases_15840488375320/COVID-19GlobalView) using Tableau Desktop. *Note: This dashboard used to have information on recoveries as well, which is best practice for COVID-19 visualizations, but unfortunately the dataset it was based on removed recovery information, as they concluded the data was too unreliable. Also, this dashboard (and so the tutorial) was designed using straight case counts, but for comparison purposes, it would make more sense to compare based on cases per # of people (e.g., cases per 100,000 people).*
-
-When working to emulate a Tableau dashboard found on the Tableau Public website, you can often click on the download icon (hover over the icons at the bottom right of the dashboard to find it) and download the underlying workbook (if the owner gave permission).  
-![Tableau Public workbook with download button highlighted]({{ '/assets/images/tableau_intermediate_000b.png' | relative_url }})
-
-![Download menu with Tableau Workbook option highlighted]({{ '/assets/images/tableau_intermediate_000c.png' | relative_url }})
-
-This is a great way to learn how to create dashboards in Tableau. However, in some situations, a workbook can be so complicated that it might take a while to unpick and understand what is going on. That is the situation here, and why this tutorial was created.
-
- 
-
-# Starting a Visualization Project
-{: #starting-a-visualization-project}
-
-Before embarking on any visualization project, you should always consider your audience and purpose for your visualization ([Stage 1](https://mdl.library.utoronto.ca/dataviz/workflow#audience)) (see our Data Visualization Guide [Design Workflow section](https://mdl.library.utoronto.ca/dataviz/workflow) for more details). For the purposes of this tutorial, the audience is for your eyes only and the purpose is to learn how to visualize data in Tableau Desktop.
-
-Next, you need to select your data and gain an understanding of it ([Stage 2](https://mdl.library.utoronto.ca/dataviz/workflow#data)). For this tutorial, we started by using a [Google Sheet document](https://docs.google.com/spreadsheets/d/14quQPFErG-hlpsrNgYcX85vW7JMMK5X2vNZrafRcH8c/htmlview#gid=1939846621) that was being continuously cleaned and updated by Tableau daily ([see this page for details](https://www.tableau.com/about/blog/2020/3/covid-19-data-resources-to-understand-virus-impact)). This was not necessarily the most authoritative or up-to-date data source to use for this topic; see our [resources pages](https://mdl.library.utoronto.ca/covid-19/resources) for other sources out there. It was selected as a good source to demonstrate linking to real time data in Tableau.
-
-*Note: The dashboard and dataset are constantly changing. Unfortunately, these instructions no longer work with the current google sheet, so instead download [this snapshot of the data](http://maps.library.utoronto.ca/workshops/TableauTutorial/COVID19Cases.xlsx) (from April 7, 2020) to use with the tutorial instead. In Tableau’s Connect screen, connect to an Excel file instead and browse to this snapshot file, then skip to step 2 to continue the tutorial. We leave the old instructions up for your reference on how you would connect to a google sheet datasource. More details about this dataset and how it has changed since this tutorial was created can be found [on this Tableau page](https://www.tableau.com/about/blog/2020/5/8-changes-to-covid-19-data-set).*
-
- 
-
-# Tableau Tutorial
-{: #tableau-tutorial}
-
- 
-
-# Connecting to a live dataset that has multiple sheets
+### Connecting to a live dataset that has multiple sheets
 {: #connecting-to-a-live-dataset-that-has-multiple-sheets}
 
 1. First start up Tableau Desktop and connect it to a Google Sheet of the COVID\-19 data. In Tableau’s Connect screen, under **To a Server**, select **Google Sheets**.  
