@@ -1,7 +1,7 @@
 ---
 title: Introduction
 parent: Creating a Tableau Dashboard using COVID-19 data (Intermediate)
-layout: 
+layout: default
 nav_order: 1
 ---
 
