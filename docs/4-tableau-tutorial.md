@@ -2,12 +2,19 @@
 title: Tableau Tutorial
 parent: Creating a Tableau Dashboard using COVID-19 data (Intermediate)
 layout: default
+created_date: 2020-04-07
+staff:
+    - name: Nick Field
+      link: https://library.utoronto.ca/staff/nick-field
+maintainer: 
+    - name: Kelly Schultz
+      link: https://library.utoronto.ca/staff/kelly-schultz
 nav_order: 4
 ---
 # Tableau Tutorial
 
 * [Connecting to a live dataset that has multiple sheets](#connecting-to-a-live-dataset-that-has-multiple-sheets)
-* [Create side-by-side bar graphs with filters for cases by day](#create-side-by-side-bar-graphs-with-filters-for-cases-by-day)
+* [Create side-by-side bar graphs with filters for cases by day](#create-side-by-side-bar-graphs-with-filtersfor-cases-by-day)
 * [Create a parameter so that the graphs change based on whether the user wants to see total cases or new cases](#create-a-parameter-so-that-the-graphs-change-based-on-whether-the-user-wants-to-see-total-cases-or-new-cases)
 * [Create a dynamic mark label](#create-a-dynamic-mark-label)
 * [Create a dynamic bar graph embedded in a tooltip](#create-a-dynamic-bar-graph-embedded-in-a-tooltip)
@@ -35,8 +42,9 @@ nav_order: 4
 
 4. Click on Sheet 1 (in orange at the bottom) to create a new worksheet.
 
-    **Create side-by-side bar graphs with filters for cases by day**
-    {: #create-side-by-side-bar-graphs-with-filters-for-cases-by-day}
+### Create side-by-side bar graphs with filters for cases by day
+
+{:style="counter-reset:step-counter 4"}
 
 5. First, we will create the side by side bar graphs of confirmed cases and deaths over time. **Right click** on the Sheet 1 tab at the bottom, select **Rename**, and give it the name “CasesbyDay”.  
 ![Renaming the new sheet to “CasesbyDay”.]({{ '/assets/images/tableau_intermediate_005a.png' | relative_url }})
@@ -91,8 +99,10 @@ nav_order: 4
     Then **right click** on the **Date** pill on the Filters shelf and select **Show Filter**. You will see a slider Date filter on the right.  
         ![“Date”, “Country_Region”, and “Case_Type” filter and legend cards displayed.]({{ '/assets/images/tableau_intermediate_021.png' | relative_url }})
 
-    **Create a parameter so that the graphs change based on whether the user wants to see total cases or new cases**
-    {: #create-a-parameter-so-that-the-graphs-change-based-on-whether-the-user-wants-to-see-total-cases-or-new-cases}
+### Create a parameter so that the graphs change based on whether the user wants to see total cases or new cases
+
+{:style="counter-reset:step-counter 15"}
+
 16. **Right click** in the blank space under the Measures section, and select **Create Parameter…** 
 ![The Field menu displayed with the menu item “Create Parameter” highlighted.]({{ '/assets/images/Tableau_Covid19_005.jpg' | relative_url }})
 
@@ -115,7 +125,7 @@ nav_order: 4
 18. In the rows section, **right click** on **SUM(Cases)**, and select **Remove**.  
 ![Dropdown menu for the pill "SUM(Cases)". The menu item "Remove" is highlighted.]({{ '/assets/images/tableau_intermediate_026.png' | relative_url }})
 
-    Then, from Measures, drag **Metric Switcher**next to **Rows**.  
+    Then, from Measures, drag **Metric Switcher** next to **Rows**.  
         ![The pills in the Columns and Rows sections are displayed.]({{ '/assets/images/tableau_intermediate_027.png' | relative_url }})
 
 19. From the Parameters section, **right click** on **Select Metric**, and select **Show Parameter**.  
@@ -123,8 +133,9 @@ nav_order: 4
 
     Now you can adjust whether Total Cases or New Cases are displayed in the bar graphs using this menu. It will sum either the field Cases or Difference depending on what was selected.
 
-    **Create a dynamic mark label**
-    {: #create-a-dynamic-mark-label}
+### Create a dynamic mark label
+
+{:style="counter-reset:step-counter 19"}
 
 20. Let’s add a dynamic mark label to highlight today’s data in the graph. From Measures, drag **Metric Switcher** to **Label** on the Marks card. From Dimensions, drag **Date** to **Label** too.  
 ![Label mark on the marks card is highlighted. ]({{ '/assets/images/tableau_intermediate_029.png' | relative_url }})
@@ -144,8 +155,9 @@ nav_order: 4
 
     *Note: Sometimes you need to select a sideways A first and then the right-side up A in order to make the change stay – just a bug. Now you should see a dynamic label for our latest data point.*
 
-    **Create a dynamic bar graph embedded in a tooltip**
-    {: #create-a-dynamic-bar-graph-embedded-in-a-tooltip}
+### Create a dynamic bar graph embedded in a tooltip
+
+{:style="counter-reset:step-counter 23"}
 
 24. Let’s create a small bar graph that will show up as part of a tooltip when you hover over a bar in the graph. First, create a second worksheet, naming it **Tooltip**.  
 ![Location of the Create Worksheet button, with the button highlighted.]({{ '/assets/images/tableau_intermediate_000.png' | relative_url }})  
@@ -176,7 +188,7 @@ nav_order: 4
 
 32. In the ensuing block of text, **highlight** <**All Fields**> (but leave the surrounding quotation marks), click on **Insert**, and then click **DAY(Date)**.  
 
-    ![The "Edit Tooltip" window with Tooltip text inserted. In the text, the section <All Fields> is highlighted.]({{ '/assets/images/tableau_intermediate_039a.png' | relative_url }})  
+    ![The "Edit Tooltip" window with Tooltip text inserted. In the text, the section 'All Fields' is highlighted.]({{ '/assets/images/tableau_intermediate_039a.png' | relative_url }})  
 
     ![The "Edit Tooltip" window with the Insert dropdown menu selected. The menu item "DAY(Date)" is highlighted.]({{ '/assets/images/Tableau_Covid19_009.jpg' | relative_url }})  
 
@@ -189,8 +201,9 @@ nav_order: 4
 ![Y axis menu with the menu item "Show Header" highlighted]({{ '/assets/images/Tableau_Covid19_010.jpg' | relative_url }})  
 ![Final graph, with the y axis label removed]({{ '/assets/images/tableau_intermediate_042.png' | relative_url }})
 
-    **Create side-by-side proportional symbol maps of cases with dynamic tooltips**
-    {: #create-side-by-side-proportional-symbol-maps-of-cases-with-dynamic-tooltips}
+### Create side-by-side proportional symbol maps of cases with dynamic tooltips
+
+{:style="counter-reset:step-counter 33"}
 
 34. For the next section of the dashboard, we need to create some maps. First, create a third **worksheet** and name it **Map**. For best practices on mapping COVID data, including an explanation of the choice of why one might use a logarithmic scale to size the proportional symbols (which we will do in this case), see this [blog post from Esri on Mapping Coronavirus, responsibly](https://www.esri.com/arcgis-blog/products/product/mapping/mapping-coronavirus-responsibly/).
 
@@ -317,8 +330,9 @@ Then click on OK.
 55. Also, let’s remove a few headers as we did with the first visualization. **Right click** on the **Case_Type header** at the top of the map, and select **Hide Field Labels for Columns**. **Right click** the **Confirmed header** on the top left of the map, and uncheck **Show Header**.  
 ![Final map displayed]({{ '/assets/images/tableau_intermediate_063.png' | relative_url }})
 
-    **Create side-by-side bar graphs for cases by country**
-    {: #create-side-by-side-bar-graphs-for-cases-by-country}
+### Create side-by-side bar graphs for cases by country
+
+{:style="counter-reset:step-counter 55"}
 
 56. For the third section of the dashboard, create a **new worksheet**, and name it “**CasesbyCountry**”.
 
@@ -356,8 +370,9 @@ Then click on OK.
 67. Click on **Label** on the Marks card and select **Show Mark Labels**. Also check off **Allow labels to overlap other marks**.  
     ![Label menu with the items "Show mark labels” and "Allow labels to overlap other marks" highlighted]({{ '/assets/images/tableau_intermediate_071.png' | relative_url }})
 
-    **Create a dashboard to pull these three visualizations together**
-    {: #create-a-dashboard-to-pull-these-three-visualizations-together}
+### Create a dashboard to pull these three visualizations together
+
+{:style="counter-reset:step-counter 67"}
 
 68. Finally, let’s create a dashboard to pull all of these visualizations together. Click on the **new dashboard** icon at the bottom to create a new dashboard.  
 !["New Dashboard" button highlighted]({{ '/assets/images/tableau_intermediate_072.png' | relative_url }})
@@ -371,7 +386,7 @@ Then click on OK.
     Then, drag **Map**, from the sheet list, to take up the **bottom half** of the dashboard.  
         ![Dragging the "Map" sheet to the bottom half of the dashboard]({{ '/assets/images/tableau_intermediate_075.png' | relative_url }})
 
-    Finally, drag**CasesbyCountry**, from the sheet list, to take up the **bottom quarter** of the dashboard.  
+    Finally, drag **CasesbyCountry**, from the sheet list, to take up the **bottom quarter** of the dashboard.  
         ![Dashboard with "CasesbyCountry" sheet dragged to the bottom quarter]({{ '/assets/images/tableau_intermediate_076.png' | relative_url }})
 
 71. From under Objects (bottom left), drag **Text** to the **top** of the dashboard. This will be your title.  
@@ -428,3 +443,5 @@ Then click on OK.
         ![The finished dashboard]({{ '/assets/images/tableau_intermediate_997a.png' | relative_url }})
 
 That’s it! Your dashboard is now complete. If you downloaded Tableau’s dashboard workbook file from Tableau Public, you will notice that not everything in that file is covered in this tutorial. Feel free to explore further and try to understand and recreate all aspects of the dashboard for your own learning.
+
+**Technique:** [Data Visualization](https://mdlutoronto.github.io/tutorials-search/?technique=Data+Visualization) \| **Tools:** [Tableau](https://mdlutoronto.github.io/tutorials-search/?tool=Tableau)
