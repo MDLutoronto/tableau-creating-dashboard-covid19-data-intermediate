@@ -2,6 +2,13 @@
 title: Introduction
 parent: Creating a Tableau Dashboard using COVID-19 data (Intermediate)
 layout: default
+created_date: 2020-04-07
+staff:
+    - name: Nick Field
+      link: https://library.utoronto.ca/staff/nick-field
+maintainer: 
+    - name: Kelly Schultz
+      link: https://library.utoronto.ca/staff/kelly-schultz
 nav_order: 1
 ---
 
@@ -17,9 +24,11 @@ Before embarking on this tutorial, do the following:
     2. [A complete guide to coronavirus charts: Be informed, not terrified](https://www.fastcompany.com/90477393/a-complete-guide-to-coronavirus-charts-be-informed-not-terrified) (Amanda Makulec, Excella, FastCompany)
     3. [17 (or so) responsible live visualizations about the coronavirus, for you to use](https://blog.datawrapper.de/coronaviruscharts/) (Datawrapper)
     4. [What the BBC got wrong in their COVID-19 visualization](https://www.tableau.com/about/blog/2020/3/covid-19-resources-data-viz-best-practices) (Tableau)
-2. [Install Tableau Desktop](https://mdl.library.utoronto.ca/technology/tutorials/installing-tableau-desktop) (This tutorial was created using Tableau Desktop version 2020.2)
+2. [Install Tableau Desktop](https://mdlutoronto.github.io/tableau-install/) (This tutorial was created using Tableau Desktop version 2020.2)
 
 3. Get more familiar with the tool we’re going to be using by trying some of our other Tableau tutorials first:
 
-    1. [Creating Data Visualizations Using Tableau Desktop](https://mdl.library.utoronto.ca/technology/tutorials/creating-data-vizualizations-using-tableau-desktop) (Beginner)
-    2. [Getting Started with Tableau Desktop](https://mdl.library.utoronto.ca/technology/tutorials/getting-started-tableau-desktop-beginner-intermediate) (Beginner to Intermediate)
+    1. [Creating Data Visualizations Using Tableau Desktop](https://mdlutoronto.github.io/tableau-creating-data-viz-beginner/) (Beginner)
+    2. [Getting Started with Tableau Desktop](https://mdlutoronto.github.io/tableau-beginner-intermediate/) (Beginner to Intermediate)
+
+**Technique:** [Data Visualization](https://mdlutoronto.github.io/tutorials-search/?technique=Data+Visualization) \| **Tools:** [Tableau](https://mdlutoronto.github.io/tutorials-search/?tool=Tableau)

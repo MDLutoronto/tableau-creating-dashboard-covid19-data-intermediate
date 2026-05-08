@@ -2,6 +2,13 @@
 title: The Dashboard
 parent: Creating a Tableau Dashboard using COVID-19 data (Intermediate)
 layout: default
+created_date: 2020-04-07
+staff:
+    - name: Nick Field
+      link: https://library.utoronto.ca/staff/nick-field
+maintainer: 
+    - name: Kelly Schultz
+      link: https://library.utoronto.ca/staff/kelly-schultz
 nav_order: 2
 ---
 
@@ -15,3 +22,5 @@ When working to emulate a Tableau dashboard found on the Tableau Public website,
 ![Download menu with Tableau Workbook option highlighted]({{ '/assets/images/tableau_intermediate_000c.png' | relative_url }})
 
 This is a great way to learn how to create dashboards in Tableau. However, in some situations, a workbook can be so complicated that it might take a while to unpick and understand what is going on. That is the situation here, and why this tutorial was created.
+
+**Technique:** [Data Visualization](https://mdlutoronto.github.io/tutorials-search/?technique=Data+Visualization) \| **Tools:** [Tableau](https://mdlutoronto.github.io/tutorials-search/?tool=Tableau)
