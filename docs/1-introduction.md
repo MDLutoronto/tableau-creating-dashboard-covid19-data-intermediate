@@ -1,11 +1,10 @@
 ---
 title: Introduction
-parent: Creating a Tableau Dashboard using COVID-19 data (Intermediate)
 layout: default
 created_date: 2020-04-07
 staff:
-    - name: Nick Field
-      link: https://library.utoronto.ca/staff/nick-field
+    - name: Kelly Schultz
+      link: https://library.utoronto.ca/staff/kelly-schultz
 maintainer: 
     - name: Kelly Schultz
       link: https://library.utoronto.ca/staff/kelly-schultz
