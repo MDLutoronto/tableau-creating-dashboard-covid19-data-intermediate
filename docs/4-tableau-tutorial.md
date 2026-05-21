@@ -11,6 +11,7 @@ maintainer:
 nav_order: 4
 has_children: true
 has_toc: false
+parent: Creating a Tableau Dashboard using COVID-19 data (Intermediate)
 ---
 # Tableau Tutorial
 
