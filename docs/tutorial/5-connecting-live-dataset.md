@@ -10,6 +10,7 @@ maintainer:
     - name: Kelly Schultz
       link: https://library.utoronto.ca/staff/kelly-schultz
 nav_order: 5
+grand_parent: Creating a Tableau Dashboard using COVID-19 data (Intermediate)
 ---
 ### Connecting to a live dataset that has multiple sheets
 {: #connecting-to-a-live-dataset-that-has-multiple-sheets}

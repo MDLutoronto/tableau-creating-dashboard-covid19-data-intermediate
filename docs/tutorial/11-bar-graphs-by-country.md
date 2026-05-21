@@ -10,6 +10,7 @@ maintainer:
     - name: Kelly Schultz
       link: https://library.utoronto.ca/staff/kelly-schultz
 nav_order: 11
+grand_parent: Creating a Tableau Dashboard using COVID-19 data (Intermediate)
 ---
 ### Create side-by-side bar graphs for cases by country
 
