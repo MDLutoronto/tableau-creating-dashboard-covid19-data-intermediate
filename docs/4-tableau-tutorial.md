@@ -15,4 +15,6 @@ parent: Creating a Tableau Dashboard using COVID-19 data (Intermediate)
 ---
 # Tableau Tutorial
 
+In this next section, we will look at building this dashboard in Tableau.
+
 **Technique:** [Data Visualization](https://mdlutoronto.github.io/tutorials-search/?technique=Data+Visualization) \| **Tools:** [Tableau](https://mdlutoronto.github.io/tutorials-search/?tool=Tableau)
