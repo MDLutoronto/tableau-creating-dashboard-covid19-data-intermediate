@@ -31,4 +31,4 @@ Before embarking on this tutorial, do the following:
     1. [Creating Data Visualizations Using Tableau Desktop](https://mdlutoronto.github.io/tableau-creating-data-viz-beginner/) (Beginner)
     2. [Getting Started with Tableau Desktop](https://mdlutoronto.github.io/tableau-beginner-intermediate/) (Beginner to Intermediate)
 
-**Technique:** [Data Visualization](https://mdlutoronto.github.io/tutorials-search/?technique=Data+Visualization) \| **Tools:** [Tableau](https://mdlutoronto.github.io/tutorials-search/?tool=Tableau)
+**Technique:** [Data Visualization](https://mdlutoronto.github.io/tutorials-search/?technique=Data+Visualization) | **Tools:** [Tableau](https://mdlutoronto.github.io/tutorials-search/?tool=Tableau)
